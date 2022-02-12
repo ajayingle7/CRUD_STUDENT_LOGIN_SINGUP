@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block c1 %}
+
+<div class="container">
+    <div class="jumbotron">
+
+        <form method="post">
+
+            {% csrf_token %}
+
+            <h1>Are you sure to delete record of {{obj.fname}},{{obj.lname}}</h1>
+
+            <input type="submit" value="YES" class="btn btn-danger btn-lg">
+            <button class="btn btn-primary btn-lg"><a href="{% url 'studentdata' %}">NO</a></button>
+
+
+
+
+        </form>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+{% endblock %}
